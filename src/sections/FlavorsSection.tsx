@@ -1,0 +1,87 @@
+"use client";
+
+import SectionReveal from "@/components/SectionReveal";
+
+const FLAVORS = [
+  {
+    name: "Original",
+    description: "Klasik BLKOUT formulu. Guclu, keskin ve uyandiric.",
+    color: "#00FF88",
+    glowClass: "glow-green",
+  },
+  {
+    name: "Berry Blast",
+    description: "Orman meyveleri esintisi ile tatli ve canlandirici bir patlama.",
+    color: "#FF3366",
+    glowClass: "glow-pink",
+  },
+  {
+    name: "Citrus Storm",
+    description: "Narenciye firtinasi. Taze, keskin, enerji dolu bir deneyim.",
+    color: "#FF8800",
+    glowClass: "glow-orange",
+  },
+];
+
+export default function FlavorsSection() {
+  return (
+    <section id="tatlar" className="relative py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-6">
+        <SectionReveal>
+          <h2 className="font-heading text-5xl md:text-7xl text-center uppercase tracking-wider mb-4">
+            Tatlar
+          </h2>
+          <p className="font-body text-text-muted text-center text-sm uppercase tracking-widest mb-16">
+            Her damak tadina uygun secenekler
+          </p>
+        </SectionReveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {FLAVORS.map((flavor, i) => (
+            <SectionReveal key={flavor.name} delay={i * 0.15}>
+              <div className="flex flex-col items-center group">
+                {/* Product placeholder */}
+                <div
+                  className="w-[180px] h-[300px] md:w-[220px] md:h-[370px] bg-bg-card rounded-xl mb-6 flex items-center justify-center
+                             transition-all duration-500 ease-out group-hover:scale-105"
+                  style={{
+                    border: `1px solid ${flavor.color}66`,
+                    boxShadow: `0 0 20px ${flavor.color}20`,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = `0 0 40px ${flavor.color}40, 0 0 80px ${flavor.color}15`;
+                    e.currentTarget.style.borderColor = flavor.color;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = `0 0 20px ${flavor.color}20`;
+                    e.currentTarget.style.borderColor = `${flavor.color}66`;
+                  }}
+                >
+                  <span
+                    className="font-heading text-2xl tracking-widest opacity-20"
+                    style={{ color: flavor.color }}
+                  >
+                    {flavor.name.toUpperCase()}
+                  </span>
+                </div>
+
+                {/* Name */}
+                <h3
+                  className="font-heading text-3xl uppercase tracking-wider mb-2"
+                  style={{ color: flavor.color }}
+                >
+                  {flavor.name}
+                </h3>
+
+                {/* Description */}
+                <p className="font-body text-text-muted text-sm text-center leading-relaxed max-w-[260px]">
+                  {flavor.description}
+                </p>
+              </div>
+            </SectionReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

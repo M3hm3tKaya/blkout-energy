@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #000000;
+  --color-bg-card: #0A0A0A;
+  --color-neon-green: #00FF88;
+  --color-neon-pink: #FF3366;
+  --color-neon-blue: #00BFFF;
+  --color-neon-orange: #FF8800;
+  --color-text: #FFFFFF;
+  --color-text-muted: #888888;
+  --font-heading: var(--font-bebas-neue);
+  --font-body: var(--font-space-grotesk);
+}
+
+/* ===== Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000000;
+  color: #FFFFFF;
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #00FF88;
+  color: #000000;
+}
+
+/* ===== Neon Grid Background ===== */
+.neon-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  perspective: 500px;
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: center top;
+  pointer-events: none;
+}
+
+/* ===== Neon Glow Utilities ===== */
+.glow-green {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3), 0 0 60px rgba(0, 255, 136, 0.1);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(255, 51, 102, 0.3), 0 0 60px rgba(255, 51, 102, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3), 0 0 60px rgba(0, 191, 255, 0.1);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 136, 0, 0.3), 0 0 60px rgba(255, 136, 0, 0.1);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5), 0 0 40px rgba(0, 255, 136, 0.2);
+}
+
+.text-glow-pink {
+  text-shadow: 0 0 20px rgba(255, 51, 102, 0.5), 0 0 40px rgba(255, 51, 102, 0.2);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 40px rgba(0, 191, 255, 0.2);
+}
+
+/* ===== Glitch Keyframes ===== */
+@keyframes glitch-1 {
+  0%, 100% { clip-path: inset(0 0 80% 0); transform: translate(-2px, 2px); }
+  25% { clip-path: inset(20% 0 60% 0); transform: translate(2px, -2px); }
+  50% { clip-path: inset(40% 0 40% 0); transform: translate(-1px, 1px); }
+  75% { clip-path: inset(60% 0 20% 0); transform: translate(1px, -1px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { clip-path: inset(80% 0 0 0); transform: translate(2px, -2px); }
+  25% { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 2px); }
+  50% { clip-path: inset(40% 0 40% 0); transform: translate(1px, -1px); }
+  75% { clip-path: inset(20% 0 60% 0); transform: translate(-1px, 1px); }
+}
+
+@keyframes neon-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00FF88;
+  border-radius: 3px;
+}
