@@ -10,7 +10,7 @@ const LIFESTYLE_ITEMS = [
     image: "/images/lifestyle-gaming.png",
   },
   {
-    text: "Limitlerini As",
+    text: "Limitlerini Aş",
     color: "#FF3366",
     glowClass: "text-glow-pink",
     image: "/images/lifestyle-sports.png",
@@ -29,10 +29,10 @@ export default function LifestyleSection() {
       <div className="max-w-7xl mx-auto px-6">
         <SectionReveal>
           <h2 className="font-heading text-5xl md:text-7xl text-center uppercase tracking-wider mb-4">
-            Yasam Tarzi
+            Yaşam Tarzı
           </h2>
           <p className="font-body text-text-muted text-center text-sm uppercase tracking-widest mb-16">
-            BLKOUT bir icki degil, bir tutum
+            BLKOUT bir içki değil, bir tutum
           </p>
         </SectionReveal>
 

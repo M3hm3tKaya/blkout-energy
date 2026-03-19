@@ -34,7 +34,7 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <p className="font-body text-neon-green text-sm uppercase tracking-[0.3em] text-glow-green">
-          Uyandiran Enerji
+          Uyandıran Enerji
         </p>
 
         {/* CTA */}
@@ -44,7 +44,7 @@ export default function HeroSection() {
                      hover:bg-neon-green hover:text-bg transition-all duration-300 ease-out
                      hover:shadow-[0_0_20px_rgba(0,255,136,0.4)]"
         >
-          Simdi Kesfet
+          Şimdi Keşfet
         </a>
       </div>
 

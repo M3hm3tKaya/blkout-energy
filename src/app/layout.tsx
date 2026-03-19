@@ -16,9 +16,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "BLKOUT Energy | Uyandiran Enerji",
+  title: "BLKOUT Energy | Uyandıran Enerji",
   description:
-    "BLKOUT Energy Drink - Geceyi fethet, limitlerini as, enerjiyi hisset.",
+    "BLKOUT Energy Drink - Geceyi fethet, limitlerini aş, enerjiyi hisset.",
 };
 
 export default function RootLayout({

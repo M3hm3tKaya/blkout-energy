@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import clsx from "clsx";
 
 const NAV_LINKS = [
-  { label: "Ozellikler", href: "#ozellikler" },
+  { label: "Özellikler", href: "#ozellikler" },
   { label: "Tatlar", href: "#tatlar" },
-  { label: "Yasam Tarzi", href: "#yasam-tarzi" },
-  { label: "Satin Al", href: "#satin-al" },
+  { label: "Yaşam Tarzı", href: "#yasam-tarzi" },
+  { label: "Satın Al", href: "#satin-al" },
 ];
 
 export default function Navbar() {

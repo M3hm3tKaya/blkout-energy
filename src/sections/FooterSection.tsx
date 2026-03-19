@@ -69,19 +69,19 @@ export default function FooterSection() {
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6">
             <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider">
-              Gizlilik Politikasi
+              Gizlilik Politikası
             </a>
             <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider">
-              Kullanim Sartlari
+              Kullanım Şartları
             </a>
             <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider">
-              Iletisim
+              İletişim
             </a>
           </div>
 
           {/* Copyright */}
           <p className="font-body text-xs text-text-muted/50">
-            &copy; 2026 BLKOUT Energy. Tum haklari saklidir.
+            &copy; 2026 BLKOUT Energy. Tüm hakları saklıdır.
           </p>
         </div>
       </div>

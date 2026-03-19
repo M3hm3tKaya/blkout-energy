@@ -5,21 +5,21 @@ import SectionReveal from "@/components/SectionReveal";
 const FLAVORS = [
   {
     name: "Original",
-    description: "Klasik BLKOUT formulu. Guclu, keskin ve uyandiric.",
+    description: "Klasik BLKOUT formülü. Güçlü, keskin ve uyandırıcı.",
     color: "#00FF88",
     glowClass: "glow-green",
     image: "/images/flavor-original.png",
   },
   {
     name: "Berry Blast",
-    description: "Orman meyveleri esintisi ile tatli ve canlandirici bir patlama.",
+    description: "Orman meyveleri esintisi ile tatlı ve canlandırıcı bir patlama.",
     color: "#FF3366",
     glowClass: "glow-pink",
     image: "/images/flavor-berry.png",
   },
   {
     name: "Citrus Storm",
-    description: "Narenciye firtinasi. Taze, keskin, enerji dolu bir deneyim.",
+    description: "Narenciye fırtınası. Taze, keskin, enerji dolu bir deneyim.",
     color: "#FF8800",
     glowClass: "glow-orange",
     image: "/images/flavor-citrus.png",
@@ -35,7 +35,7 @@ export default function FlavorsSection() {
             Tatlar
           </h2>
           <p className="font-body text-text-muted text-center text-sm uppercase tracking-widest mb-16">
-            Her damak tadina uygun secenekler
+            Her damak tadına uygun seçenekler
           </p>
         </SectionReveal>
 

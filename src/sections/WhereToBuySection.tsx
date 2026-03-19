@@ -8,10 +8,10 @@ export default function WhereToBuySection() {
       <div className="max-w-7xl mx-auto px-6">
         <SectionReveal>
           <h2 className="font-heading text-5xl md:text-7xl text-center uppercase tracking-wider mb-4">
-            Nereden Alinir
+            Nereden Alınır
           </h2>
           <p className="font-body text-text-muted text-center text-sm uppercase tracking-widest mb-16">
-            Sana en yakin noktada BLKOUT seni bekliyor
+            Sana en yakın noktada BLKOUT seni bekliyor
           </p>
         </SectionReveal>
 
@@ -35,7 +35,7 @@ export default function WhereToBuySection() {
                          hover:shadow-[0_0_30px_rgba(0,255,136,0.4)] transition-all duration-300 ease-out
                          hover:scale-105"
             >
-              Online Siparis
+              Online Sipariş
             </a>
           </div>
         </SectionReveal>

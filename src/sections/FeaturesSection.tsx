@@ -6,7 +6,7 @@ import SectionReveal from "@/components/SectionReveal";
 const FEATURES = [
   {
     title: "200mg Kafein",
-    description: "Yuksek performans icin optimize edilmis kafein formulasyonu ile butun gun enerji.",
+    description: "Yüksek performans için optimize edilmiş kafein formülasyonu ile bütün gün enerji.",
     color: "#00FF88",
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -15,8 +15,8 @@ const FEATURES = [
     ),
   },
   {
-    title: "Sifir Seker",
-    description: "Tatli tat, sifir kalori. Saglikli yasam tarzina uygun formul.",
+    title: "Sıfır Şeker",
+    description: "Tatlı tat, sıfır kalori. Sağlıklı yaşam tarzına uygun formül.",
     color: "#FF3366",
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -27,7 +27,7 @@ const FEATURES = [
   },
   {
     title: "B Vitamin",
-    description: "B6 ve B12 vitamin kompleksi ile metabolizmayi hizlandiran destek.",
+    description: "B6 ve B12 vitamin kompleksi ile metabolizmayı hızlandıran destek.",
     color: "#00BFFF",
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -47,7 +47,7 @@ export default function FeaturesSection() {
             Neden BLKOUT?
           </h2>
           <p className="font-body text-text-muted text-center text-sm uppercase tracking-widest mb-16">
-            Her yudumda fark yaratan formulasyon
+            Her yudumda fark yaratan formülasyon
           </p>
         </SectionReveal>
 
