@@ -15,14 +15,14 @@ const FLAVORS = [
     description: "Orman meyveleri esintisi ile tatli ve canlandirici bir patlama.",
     color: "#FF3366",
     glowClass: "glow-pink",
-    image: "/images/flavor-original.png",
+    image: "/images/flavor-berry.png",
   },
   {
     name: "Citrus Storm",
     description: "Narenciye firtinasi. Taze, keskin, enerji dolu bir deneyim.",
     color: "#FF8800",
     glowClass: "glow-orange",
-    image: "/images/flavor-original.png",
+    image: "/images/flavor-citrus.png",
   },
 ];
 
