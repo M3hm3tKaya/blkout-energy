@@ -8,18 +8,21 @@ const FLAVORS = [
     description: "Klasik BLKOUT formulu. Guclu, keskin ve uyandiric.",
     color: "#00FF88",
     glowClass: "glow-green",
+    image: "/images/flavor-original.png",
   },
   {
     name: "Berry Blast",
     description: "Orman meyveleri esintisi ile tatli ve canlandirici bir patlama.",
     color: "#FF3366",
     glowClass: "glow-pink",
+    image: "/images/flavor-original.png",
   },
   {
     name: "Citrus Storm",
     description: "Narenciye firtinasi. Taze, keskin, enerji dolu bir deneyim.",
     color: "#FF8800",
     glowClass: "glow-orange",
+    image: "/images/flavor-original.png",
   },
 ];
 
@@ -40,9 +43,9 @@ export default function FlavorsSection() {
           {FLAVORS.map((flavor, i) => (
             <SectionReveal key={flavor.name} delay={i * 0.15}>
               <div className="flex flex-col items-center group">
-                {/* Product placeholder */}
+                {/* Product image */}
                 <div
-                  className="w-[180px] h-[300px] md:w-[220px] md:h-[370px] bg-bg-card rounded-xl mb-6 flex items-center justify-center
+                  className="w-[180px] h-[300px] md:w-[220px] md:h-[370px] rounded-xl mb-6 overflow-hidden
                              transition-all duration-500 ease-out group-hover:scale-105"
                   style={{
                     border: `1px solid ${flavor.color}66`,
@@ -57,12 +60,11 @@ export default function FlavorsSection() {
                     e.currentTarget.style.borderColor = `${flavor.color}66`;
                   }}
                 >
-                  <span
-                    className="font-heading text-2xl tracking-widest opacity-20"
-                    style={{ color: flavor.color }}
-                  >
-                    {flavor.name.toUpperCase()}
-                  </span>
+                  <img
+                    src={flavor.image}
+                    alt={`BLKOUT ${flavor.name}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Name */}

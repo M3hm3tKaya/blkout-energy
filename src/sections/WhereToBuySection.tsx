@@ -2,15 +2,6 @@
 
 import SectionReveal from "@/components/SectionReveal";
 
-const STORES = [
-  "Migros",
-  "A101",
-  "BIM",
-  "Sok",
-  "CarrefourSA",
-  "Getir",
-];
-
 export default function WhereToBuySection() {
   return (
     <section id="satin-al" className="relative py-24 md:py-32">
@@ -24,21 +15,14 @@ export default function WhereToBuySection() {
           </p>
         </SectionReveal>
 
-        {/* Store logos grid */}
+        {/* Store logos */}
         <SectionReveal delay={0.2}>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 mb-16">
-            {STORES.map((store) => (
-              <div
-                key={store}
-                className="bg-bg-card border border-neon-green/10 rounded-lg h-24 flex items-center justify-center
-                           hover:border-neon-green/40 transition-all duration-300 group cursor-pointer
-                           hover:shadow-[0_0_15px_rgba(0,255,136,0.1)]"
-              >
-                <span className="font-body text-text-muted text-sm uppercase tracking-wider group-hover:text-neon-green transition-colors duration-300">
-                  {store}
-                </span>
-              </div>
-            ))}
+          <div className="flex justify-center mb-16">
+            <img
+              src="/images/store-logos.png"
+              alt="Migros, A101, BIM, Sok, CarrefourSA, Getir"
+              className="w-full max-w-4xl h-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+            />
           </div>
         </SectionReveal>
 

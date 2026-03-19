@@ -17,19 +17,12 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-8">
-        {/* Product placeholder */}
-        <div
-          className="w-[200px] h-[340px] sm:w-[250px] sm:h-[420px] md:w-[300px] md:h-[500px] bg-bg rounded-2xl flex items-center justify-center"
-          style={{
-            border: "2px solid #00FF88",
-            boxShadow:
-              "0 0 30px rgba(0, 255, 136, 0.3), 0 0 80px rgba(0, 255, 136, 0.1), inset 0 0 30px rgba(0, 255, 136, 0.05)",
-          }}
-        >
-          <span className="font-heading text-neon-green/30 text-4xl tracking-widest rotate-[-90deg]">
-            BLKOUT
-          </span>
-        </div>
+        {/* Product image */}
+        <img
+          src="/images/product-hero.png"
+          alt="BLKOUT Energy Drink"
+          className="w-[200px] h-[340px] sm:w-[250px] sm:h-[420px] md:w-[300px] md:h-[500px] object-contain drop-shadow-[0_0_30px_rgba(0,255,136,0.3)]"
+        />
 
         {/* Title */}
         <h1

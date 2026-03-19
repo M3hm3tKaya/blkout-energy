@@ -7,16 +7,19 @@ const LIFESTYLE_ITEMS = [
     text: "Geceyi Fethet",
     color: "#00FF88",
     glowClass: "text-glow-green",
+    image: "/images/lifestyle-gaming.png",
   },
   {
     text: "Limitlerini As",
     color: "#FF3366",
     glowClass: "text-glow-pink",
+    image: "/images/lifestyle-sports.png",
   },
   {
     text: "Enerjiyi Hisset",
     color: "#00BFFF",
     glowClass: "text-glow-blue",
+    image: "/images/lifestyle-nightlife.png",
   },
 ];
 
@@ -42,6 +45,13 @@ export default function LifestyleSection() {
                   borderBottom: i < LIFESTYLE_ITEMS.length - 1 ? `1px solid ${item.color}15` : "none",
                 }}
               >
+                {/* Background image */}
+                <img
+                  src={item.image}
+                  alt={item.text}
+                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                />
+
                 {/* Background glow on hover */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
