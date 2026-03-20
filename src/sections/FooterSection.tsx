@@ -44,22 +44,22 @@ const SOCIAL_LINKS = [
 
 export default function FooterSection() {
   return (
-    <footer className="relative bg-bg border-t border-neon-green/10 py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col items-center gap-8">
+    <footer className="relative bg-bg border-t border-neon-green/10 py-10 sm:py-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col items-center gap-6 sm:gap-8">
           {/* Logo */}
-          <span className="font-heading text-4xl md:text-5xl text-neon-green text-glow-green tracking-wider animate-neon-pulse">
+          <span className="font-heading text-3xl sm:text-4xl md:text-5xl text-neon-green text-glow-green tracking-wider animate-neon-pulse">
             BLKOUT
           </span>
 
           {/* Social icons */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
             {SOCIAL_LINKS.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
                 aria-label={social.name}
-                className="text-text-muted hover:text-neon-green transition-colors duration-300"
+                className="text-text-muted hover:text-neon-green transition-colors duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
                 {social.icon}
               </a>
@@ -67,20 +67,20 @@ export default function FooterSection() {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider min-h-[44px] flex items-center">
               Gizlilik Politikası
             </a>
-            <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider">
+            <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider min-h-[44px] flex items-center">
               Kullanım Şartları
             </a>
-            <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider">
+            <a href="#" className="font-body text-xs text-text-muted hover:text-text transition-colors duration-300 uppercase tracking-wider min-h-[44px] flex items-center">
               İletişim
             </a>
           </div>
 
           {/* Copyright */}
-          <p className="font-body text-xs text-text-muted/50">
+          <p className="font-body text-xs text-text-muted/50 text-center">
             &copy; 2026 BLKOUT Energy. Tüm hakları saklıdır.
           </p>
         </div>

@@ -31,7 +31,7 @@ export default function RootLayout({
       lang="tr"
       className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased`}
     >
-      <body className="min-h-screen bg-bg text-text">{children}</body>
+      <body className="min-h-screen bg-bg text-text overflow-x-hidden">{children}</body>
     </html>
   );
 }

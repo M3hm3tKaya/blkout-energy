@@ -29,7 +29,7 @@ export default function Navbar() {
         scrolled ? "bg-bg/90 backdrop-blur-md border-b border-neon-green/10" : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a
           href="#"
@@ -53,7 +53,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 relative z-50"
+          className="md:hidden flex flex-col gap-1.5 relative z-50 min-h-[44px] min-w-[44px] items-center justify-center"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >

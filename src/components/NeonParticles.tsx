@@ -28,6 +28,8 @@ export default function NeonParticles() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const isMobile = window.innerWidth < 768;
+
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -35,9 +37,12 @@ export default function NeonParticles() {
     resize();
     window.addEventListener("resize", resize);
 
+    // Fewer particles on mobile for performance
+    const particleCount = isMobile ? 12 : 35;
+
     // Init particles
     const particles: Particle[] = [];
-    for (let i = 0; i < 35; i++) {
+    for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -51,6 +56,9 @@ export default function NeonParticles() {
       });
     }
     particlesRef.current = particles;
+
+    // Smaller glow radius on mobile
+    const glowMultiplier = isMobile ? 2 : 4;
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -70,11 +78,11 @@ export default function NeonParticles() {
 
         // Glow
         ctx.beginPath();
-        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 4);
+        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * glowMultiplier);
         gradient.addColorStop(0, p.color + Math.round(currentAlpha * 255).toString(16).padStart(2, "0"));
         gradient.addColorStop(1, p.color + "00");
         ctx.fillStyle = gradient;
-        ctx.arc(p.x, p.y, p.size * 4, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.size * glowMultiplier, 0, Math.PI * 2);
         ctx.fill();
 
         // Core dot

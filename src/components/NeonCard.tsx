@@ -13,7 +13,7 @@ export default function NeonCard({ children, neonColor, className }: NeonCardPro
   return (
     <div
       className={clsx(
-        "relative bg-bg-card rounded-lg p-8 transition-all duration-300 ease-out cursor-pointer group",
+        "relative bg-bg-card rounded-lg p-5 sm:p-6 md:p-8 transition-all duration-300 ease-out cursor-pointer group",
         className
       )}
       style={{

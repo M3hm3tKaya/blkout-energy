@@ -25,13 +25,13 @@ const LIFESTYLE_ITEMS = [
 
 export default function LifestyleSection() {
   return (
-    <section id="yasam-tarzi" className="relative py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="yasam-tarzi" className="relative py-16 sm:py-24 md:py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <SectionReveal>
-          <h2 className="font-heading text-5xl md:text-7xl text-center uppercase tracking-wider mb-4">
+          <h2 className="font-heading text-3xl sm:text-5xl md:text-7xl text-center uppercase tracking-wider mb-4">
             Yaşam Tarzı
           </h2>
-          <p className="font-body text-text-muted text-center text-sm uppercase tracking-widest mb-16">
+          <p className="font-body text-text-muted text-center text-xs sm:text-sm uppercase tracking-widest mb-10 sm:mb-16">
             BLKOUT bir içki değil, bir tutum
           </p>
         </SectionReveal>
@@ -40,28 +40,28 @@ export default function LifestyleSection() {
           {LIFESTYLE_ITEMS.map((item, i) => (
             <SectionReveal key={item.text} delay={i * 0.15}>
               <div
-                className="w-full py-16 md:py-24 flex items-center justify-center relative overflow-hidden group cursor-pointer"
+                className="w-full py-10 sm:py-16 md:py-24 flex items-center justify-center relative overflow-hidden group cursor-pointer"
                 style={{
                   borderBottom: i < LIFESTYLE_ITEMS.length - 1 ? `1px solid ${item.color}15` : "none",
                 }}
               >
-                {/* Background image */}
+                {/* Background image - hidden on mobile for performance */}
                 <img
                   src={item.image}
                   alt={item.text}
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-20 transition-opacity duration-500 hidden md:block"
                 />
 
-                {/* Background glow on hover */}
+                {/* Background glow on hover - hidden on mobile for performance */}
                 <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block"
                   style={{
                     background: `radial-gradient(ellipse at center, ${item.color}08 0%, transparent 70%)`,
                   }}
                 />
 
                 <h3
-                  className={`font-heading text-5xl sm:text-6xl md:text-8xl lg:text-9xl uppercase tracking-wider
+                  className={`font-heading text-3xl sm:text-5xl md:text-8xl lg:text-9xl uppercase tracking-wider
                              transition-all duration-500 ease-out group-hover:scale-105 ${item.glowClass}`}
                   style={{ color: item.color }}
                 >

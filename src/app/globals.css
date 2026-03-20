@@ -47,6 +47,41 @@
   }
 
   .glow-green {
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  }
+
+  .glow-pink {
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.2);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 10px rgba(255, 136, 0, 0.2);
+  }
+
+  .text-glow-green {
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  }
+
+  .text-glow-pink {
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.3);
+  }
+
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+  }
+
+  .animate-neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite;
+  }
+}
+
+/* Desktop: full glow intensity */
+@media (min-width: 768px) {
+  .glow-green {
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.3), 0 0 60px rgba(0, 255, 136, 0.1);
   }
 
@@ -72,10 +107,6 @@
 
   .text-glow-blue {
     text-shadow: 0 0 20px rgba(0, 191, 255, 0.5), 0 0 40px rgba(0, 191, 255, 0.2);
-  }
-
-  .animate-neon-pulse {
-    animation: neon-pulse 2s ease-in-out infinite;
   }
 }
 
